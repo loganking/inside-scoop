@@ -1,0 +1,7 @@
+{
+	"name": "InsideScoopServer",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "server",
+    "workspaceFolder": "/workspaces/inside-scoop-server",
+	"forwardPorts": [8787]
+}

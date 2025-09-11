@@ -1,0 +1,15 @@
+version: '3.8'
+
+name: inside-scoop-server
+
+services: 
+  server:
+    build:
+      context: ../.
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - app-data:/workspaces/inside-scoop-server
+    command: sleep infinity
+  
+volumes:
+  app-data:

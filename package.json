@@ -1,0 +1,20 @@
+{
+  "name": "hono-server-app",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "A privacy focused family & friends review app with a read-only REST API.",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "wrangler dev --ip 127.0.0.1",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.2",
+    "fs": "^0.0.1-security",
+    "hono": "^4.8.5"
+  },
+  "devDependencies": {
+    "wrangler": "^4.24.4"
+  }
+}
