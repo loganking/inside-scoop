@@ -7,14 +7,19 @@
   "scripts": {
     "dev": "wrangler dev --ip 127.0.0.1",
     "deploy": "wrangler deploy --minify",
-    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "migrations:generate": "drizzle-kit generate",
+    "migrations:list": "wrangler d1 migrations list test-db",
+    "migrations:apply": "wrangler d1 migrations apply test-db"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.7.2",
+    "drizzle-orm": "^0.44.5",
     "fs": "^0.0.1-security",
     "hono": "^4.8.5"
   },
   "devDependencies": {
+    "drizzle-kit": "^0.31.4",
     "wrangler": "^4.24.4"
   }
 }

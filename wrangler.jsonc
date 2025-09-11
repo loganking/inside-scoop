@@ -10,9 +10,10 @@
     {
       "binding": "DB",
       "database_name": "test-db",
-      "database_id": "c020574a-5623-407b-be0c-cd192bab9545"
+      "database_id": "c020574a-5623-407b-be0c-cd192bab9545",
+      "migrations_dir": "./src/db/migrations"
     }
-  ]
+  ],
   // "compatibility_flags": [
   //   "nodejs_compat"
   // ],
