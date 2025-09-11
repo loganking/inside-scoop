@@ -4,7 +4,7 @@
   "main": "src/app.ts",
   "compatibility_date": "2025-07-12",
   "assets": {
-    "directory": "./src/game/",
+    "directory": "./assets/",
   },
   "d1_databases": [
     {
