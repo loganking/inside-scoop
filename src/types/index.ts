@@ -1,3 +1,16 @@
+import { time } from "drizzle-orm/mysql-core";
+import { DrizzleDB } from "../db/helpers";
+
+export type Context = {
+  Bindings: {
+    DB: D1Database;
+  };
+  Variables: {
+    user: User | null;
+    db: DrizzleDB;
+  };
+};
+
 export interface User {
     id: string;
     name: string;
@@ -10,7 +23,7 @@ export interface User {
 export interface Store {
     id: string;
     name: string;
-    address: string;
+    address: string | null;
     img?: string;
     description?: string;
     createdAt: string;
@@ -22,5 +35,5 @@ export interface Review {
     userId: string;
     storeId: string;
     rating: number;
-    comment: string;
+    comment: string | null;
 }

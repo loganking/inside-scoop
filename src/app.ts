@@ -1,7 +1,7 @@
 import { Hono } from 'hono';
-import usersRoutes from './routes/users';
-import storesRoutes from './routes/stores';
-import reviewsRoutes from './routes/reviews';
+import usersRoutes from './modules/users/routes';
+import storesRoutes from './modules/stores/routes';
+import reviewsRoutes from './modules/reviews/routes';
 
 const api = new Hono().basePath('/api');
 

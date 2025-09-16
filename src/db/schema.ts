@@ -1,7 +1,7 @@
 import { sql } from 'drizzle-orm';
 import { integer, sqliteTable, text } from "drizzle-orm/sqlite-core";
 
-export const user = sqliteTable("user", {
+export const userTable = sqliteTable("user", {
   id: text("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
@@ -10,7 +10,7 @@ export const user = sqliteTable("user", {
   updatedAt: integer("updated_at", { mode: "boolean" }).default(false),
 });
 
-export const store = sqliteTable("store", {
+export const storeTable = sqliteTable("store", {
   id: text("id").primaryKey(),
   name: text("name").notNull(),
   address: text("address"),
@@ -18,7 +18,7 @@ export const store = sqliteTable("store", {
   updatedAt: integer("updated_at", { mode: "boolean" }).default(false),
 });
 
-export const review = sqliteTable("review", {
+export const reviewTable = sqliteTable("review", {
   id: text("id").primaryKey(),
   userId: text("user_id").notNull(),
   storeId: text("store_id").notNull(),
